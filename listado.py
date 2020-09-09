@@ -1,11 +1,7 @@
 class listado():
-    def listar(self, dbCon,database,tabla):
-        curs = dbCon.cursor(buffered=True)
-        sql = "select * from {}.{} order by 1".format(database,tabla)
-        curs.execute(sql)
-        data = curs.fetchall()
-        return data
-    
+    """Esta clase se encarga de listar los registros que se encuentren
+        almacenados en la Base de Datos para mostrarlos
+        en la ventana destinada para tal fin en el Tkinter"""
     def alta(self, dbCon,database, titulo,descripcion):
         curs = dbCon.cursor()
         sql_alta = "insert into {}.producto (titulo, descripcion) VALUES (%s, %s)".format(database)
