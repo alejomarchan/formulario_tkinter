@@ -17,7 +17,7 @@ class DatabaseClass:
             self.db = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="1234"
+            password=""
             )
         except Error as e:
             print("Error conectando a MySQL", e)
